@@ -13,8 +13,8 @@ class Adapter(var dataModellist: MutableList<DataModel>) :
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterViewHolder {
-        var inflater = LayoutInflater.from(parent.context)
-        var view: View = inflater.inflate(R.layout.item_adapter, parent, false)
+        val inflater = LayoutInflater.from(parent.context)
+        val view: View = inflater.inflate(R.layout.item_adapter, parent, false)
         return AdapterViewHolder(view)
 
     }

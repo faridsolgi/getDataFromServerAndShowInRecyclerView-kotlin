@@ -17,9 +17,9 @@ val TAG="main"
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //
-        var recyclerView=recyclearview_main_adapter
+        val recyclerView=recyclearview_main_adapter
         recyclerView?.layoutManager=LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
-        var api= WebApi(applicationContext)
+        val api= WebApi(applicationContext)
         api.getData(this)
 
 
@@ -31,7 +31,7 @@ val TAG="main"
     override fun onGetDataSuccessfull(list: MutableList<DataModel>) {
         val adapter= Adapter(list)
         var i=0
-        var recyclerView=recyclearview_main_adapter
+        val recyclerView=recyclearview_main_adapter
         recyclerView?.adapter=adapter
         Log.d(TAG,"${list.size}")
 

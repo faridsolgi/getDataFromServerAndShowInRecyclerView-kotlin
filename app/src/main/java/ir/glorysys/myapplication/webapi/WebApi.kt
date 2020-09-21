@@ -13,13 +13,13 @@ class WebApi(var context: Context) {
 
     fun getData(onGetData: onGetData) {
         val url = "https://jsonplaceholder.typicode.com/comments"
-        var jsonArrayRequest = JsonArrayRequest(Request.Method.GET, url, null,
+        val jsonArrayRequest = JsonArrayRequest(Request.Method.GET, url, null,
             Response.Listener {
                var i=0
                 val list: MutableList<DataModel> = mutableListOf()
                 while (i<it.length()){
                     try {
-                        var json=it.getJSONObject(i)
+                        val json=it.getJSONObject(i)
                         val dataModel= DataModel()
                         dataModel.name= json.getString("name")
                         dataModel.email= json.getString("email")
