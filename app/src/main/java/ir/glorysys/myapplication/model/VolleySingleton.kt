@@ -1,4 +1,4 @@
-package ir.glorysys.myapplication
+package ir.glorysys.myapplication.model
 
 import android.content.Context
 import com.android.volley.RequestQueue

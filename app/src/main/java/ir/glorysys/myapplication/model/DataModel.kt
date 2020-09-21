@@ -1,4 +1,4 @@
-package ir.glorysys.myapplication
+package ir.glorysys.myapplication.model
 
 class DataModel {
     var name:String = ""

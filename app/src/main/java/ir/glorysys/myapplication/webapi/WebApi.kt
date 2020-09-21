@@ -1,9 +1,11 @@
-package ir.glorysys.myapplication
+package ir.glorysys.myapplication.webapi
 
 import android.content.Context
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
+import ir.glorysys.myapplication.model.DataModel
+import ir.glorysys.myapplication.model.VolleySingleton
 import java.lang.Exception
 
 class WebApi(var context: Context) {
@@ -18,7 +20,7 @@ class WebApi(var context: Context) {
                 while (i<it.length()){
                     try {
                         var json=it.getJSONObject(i)
-                        val dataModel=DataModel()
+                        val dataModel= DataModel()
                         dataModel.name= json.getString("name")
                         dataModel.email= json.getString("email")
                         list.add(dataModel)
@@ -30,7 +32,7 @@ class WebApi(var context: Context) {
             Response.ErrorListener {
                 onGetData.onGetDataError()
             })
-        val volleySingleton =VolleySingleton()
+        val volleySingleton = VolleySingleton()
         volleySingleton.getInstance(context)?.add(jsonArrayRequest)
     }
     interface onGetData{

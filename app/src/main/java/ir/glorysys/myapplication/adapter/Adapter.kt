@@ -1,12 +1,12 @@
-package ir.glorysys.myapplication
+package ir.glorysys.myapplication.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.item_adapter.textview_adapter_title
+import ir.glorysys.myapplication.model.DataModel
+import ir.glorysys.myapplication.R
 
 class Adapter(var dataModellist: MutableList<DataModel>) :
     RecyclerView.Adapter<Adapter.AdapterViewHolder>() {
