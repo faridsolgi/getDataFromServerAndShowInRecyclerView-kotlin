@@ -33,12 +33,12 @@ val TAG="main"
         var i=0
         var recyclerView=recyclearview_main_adapter
         recyclerView?.adapter=adapter
-        Log.i("receved","${list.size}")
+        Log.d(TAG,"${list.size}")
 
     }
 
     override fun onGetDataError(){
-        Log.i("receved","error")
+        Log.d(TAG,"error")
     }
 
 
